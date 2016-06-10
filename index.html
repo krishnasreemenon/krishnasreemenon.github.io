@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
@@ -8,7 +8,13 @@
 
     <style>
     body{
-      background: url('images/TJ29.jpg'); background-size: 100%; background-attachment: fixed;
+      background: url('images/TJ29.jpg') 50%; background-attachment: fixed; background-size: cover;
+    }
+
+    @media (max-width:600) {
+      body{
+        background: url('images/TJ29.jpg') 100% 700px 100px;
+      }
     }
     .center-text{
       width: 100%; position: relative; top: 50%; text-align: center;
