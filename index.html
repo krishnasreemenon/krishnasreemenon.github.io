@@ -1,32 +1,243 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Krishnasree Menon 💙 Rahul Krishna</title>
+<html>
+<head>
+	<title>Fitsquare</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/gym_search.css">
 
-    <style>
-    body{
-      background: url('images/TJ29.jpg') 50%; background-attachment: fixed; background-size: cover;
-      height: 100%;
-    }
+	<script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="bower_components/babel/browser.js"></script>
+    <script src="bower_components/ngReact/ngReact.js"></script>
+    <script src="js/gym_search.js" type="text/babel"></script>
+
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+
+	<link rel="import" href="bower_components/google-apis/google-maps-api.html">
+	<link rel="import" href="bower_components/google-map/google-map.html">
+
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+	<style is="custom-style">
+		/*Filters*/
+		paper-checkbox.pink {
+			--paper-checkbox-checked-color:#cf0f50 ;
+			--paper-checkbox-checked-ink-color:#cf0f50 ;
+			--paper-checkbox-unchecked-color:#cf0f50 ;
+			--paper-checkbox-unchecked-ink-color:#cf0f50 ;
+			--paper-checkbox-label-color:#cf0f50 ;
+			--paper-checkbox-label-checked-color:#cf0f50 ;
+			--paper-checkbox-checkmark-color:#cf0f50;
+		}
+	</style>
+</head>
+<body>
+
+<nav class="navbar custom-nav navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle custom-navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="fa fa-bars"></i>
+				
+			</button>
+			<a class="navbar-brand" href="#"><img src="images/logo.png" class="logo"></a>
+		</div>
+		
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="custom-navbar-links"><a href="#" class="custom-nav-a">HOME</a></li>
+				<li class="custom-navbar-links"><a href="#" class="custom-nav-a">ABOUT</a></li>
+				<li class="custom-navbar-links"><a href="#" class="custom-nav-a">CONTACT</a></li>
+				<li class="custom-navbar-links"><a href="#" class="custom-nav-login">Login</a></li>
+			</ul>
+
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
+
+			<form class="custom-navbar-form" role="search">
+				<div class="form-group custom-search-icon">
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-search"></i>
+							<input type="text" class="form-control custom-nav-search" placeholder="Search for gyms type your locality..."/>
+					</div>
+				</div>
+			</form>
+
+<br><br><br><br><br>
+<div class="container-fluid">
+
+	<div class="col-md-3 left-bar">
+		<div class="row">
+			<div class="col-md-10 col-md-push-1 left-bar-cols location-and-result">
+				<span class="pink-underline">Showing 76 Gyms now</span>
+				<br><br>
+				New Delhi
+			</div>
+
+			<div class="col-md-10 col-md-push-1 left-bar-cols">
+				<div class="left-bar-col-title">Sort By</div>
+				<select class="custom-filters-option">
+					<option>Popularity</option>
+				</select>
+			</div>
+
+			<div class="col-md-10 col-md-push-1 left-bar-cols">
+				<div class="left-bar-col-title">Filters</div>
+				<div class="row">
+								<div class="col-md-9 custom-filters-checkbox col-xs-10">Online Bookings</div><div class="col-md-1"><paper-checkbox noink class="pink"></paper-checkbox></div><br>
+								<div class="col-md-9 custom-filters-checkbox col-xs-10">Nutritionist</div><div class="col-md-1"><paper-checkbox noink class="pink"></paper-checkbox></div><br>
+								<div class="col-md-9 custom-filters-checkbox col-xs-10">Wifi</div><div class="col-md-1"><paper-checkbox noink class="pink"></paper-checkbox></div><br>
+								<div class="col-md-9 custom-filters-checkbox col-xs-10">Personal Trainer</div><div class="col-md-1"><paper-checkbox noink class="pink"></paper-checkbox></div><br>
+								<div class="col-md-9 custom-filters-checkbox col-xs-10">Credit Cards</div><div class="col-md-1"><paper-checkbox noink class="pink"></paper-checkbox></div><br>
+								<div class="col-md-9 custom-filters-checkbox col-xs-10">Pet Friendly</div><div class="col-md-1"><paper-checkbox noink class="pink"></paper-checkbox></div><br>
+								<div class="col-md-9 custom-filters-checkbox col-xs-10">Spa</div><div class="col-md-1"><paper-checkbox noink class="pink"></paper-checkbox></div><br></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-5 col-md-push-3" ng-controller="gymController">
+		<div class="row">
+
+				<style>
+					google-map {
+						height: 200px;
+					}
+				</style>
+				<google-map latitude="12.9" longitude="79.1" class="col-md-12 gym-listing"></google-map>
+			</div>
+
+				<gymlist datapassedtoreactfromangular="gyms_data_from_the_server"/>
 
 
-    .center-text{
-      width: 100%; position: relative; top:60%; text-align: center;
-    }
-    h1{
-      font-family: Lato; color: #fff;
-    }
-    </style>
+	</div>
 
-  </head>
-  <body>
 
-    <div class="center-text">
-      <h1>~ Stay With Me Forever ~</h1>
-    </div>
 
-  </body>
+	<div class="col-md-4 col-md-offset-8 right-bar">
+		<div class="row">
+		<div class="col-md-10 col-md-push-1 ads">
+			<div class="col-md-4 gym-ad-image">
+			</div>
+			<div class="col-md-8">
+				<div class="row gym-ad-title">
+					<div class="col-md-9">
+						<i class="fa fa-bookmark" aria-hidden="true" style="color:#c0272d; font-size:15px;"></i> Sponsored
+					</div>
+					<div class="col-md-2 gym-ad-title-rating">
+						4.6
+					</div>
+				</div>
+
+				<div class="row">
+				<div class="col-md-12 gym-ad-name"><h4>Spartaa Fitness</h4></div>
+				<div class="col-md-12 gym-ad-address"><small>2 Floor Building No 110, Safdarjung Enclave, Near NCC Gate Delhi - 110029</small></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-10 col-md-push-1 ads">
+			<div class="col-md-4 gym-ad-image">
+			</div>
+			<div class="col-md-8">
+				<div class="row gym-ad-title">
+					<div class="col-md-9">
+						<i class="fa fa-bookmark" aria-hidden="true" style="color:#c0272d; font-size:15px;"></i> Sponsored
+					</div>
+					<div class="col-md-2 gym-ad-title-rating">
+						4.6
+					</div>
+				</div>
+
+				<div class="row">
+				<div class="col-md-12 gym-ad-name"><h4>Spartaa Fitness</h4></div>
+				<div class="col-md-12 gym-ad-address"><small>2 Floor Building No 110, Safdarjung Enclave, Near NCC Gate Delhi - 110029</small></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-10 col-md-push-1 ads">
+			<div class="col-md-4 gym-ad-image">
+			</div>
+			<div class="col-md-8">
+				<div class="row gym-ad-title">
+					<div class="col-md-9">
+						<i class="fa fa-bookmark" aria-hidden="true" style="color:#c0272d; font-size:15px;"></i> Sponsored
+					</div>
+					<div class="col-md-2 gym-ad-title-rating">
+						4.6
+					</div>
+				</div>
+
+				<div class="row">
+				<div class="col-md-12 gym-ad-name"><h4>Spartaa Fitness</h4></div>
+				<div class="col-md-12 gym-ad-address"><small>2 Floor Building No 110, Safdarjung Enclave, Near NCC Gate Delhi - 110029</small></div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+<footer class="container-fluid">
+	<div class="row footer-inner">
+		<div class="col-md-12 footer-links">
+			<div class="col-md-3 fitsquare-logo">
+
+			</div>
+			<div class="col-md-3">
+			<ul>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Media Kit</a></li>
+			</ul>
+			</div>
+			<div class="col-md-3">
+			<ul>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="#">Feedback</a></li>
+			</ul>
+			</div>
+			<div class="col-md-3">
+			<ul>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Sitemap</a></li>
+			</ul>
+			</div>
+		</div>
+
+		<div class="footer-social col-md-12">
+			<div class="footer-social-title">
+				Join Us On
+			</div>
+			<div class="footer-social-links">
+				<div class="col-md-2"><a href="#">Facebook</a></div>
+				<div class="col-md-2"><a href="#">Google+</a></div>
+				<div class="col-md-2"><a href="#">Twitter</a></div>
+				<div class="col-md-2"><a href="#">Linkedin</a></div>
+				<div class="col-md-2"><a href="#">Youtube</a></div>
+				<div class="col-md-2"><a href="#">Pinterest</a></div>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
 </html>

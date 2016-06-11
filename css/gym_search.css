@@ -1,0 +1,299 @@
+		*{
+			font-family: Lato;
+		}
+
+		body{
+			background: #ececeb;
+		}
+
+
+		.navbar-brand{
+			width: 40%;
+		}
+
+		.navbar-brand:hover{
+			border: rgba(1,1,1,0);
+		}
+
+		.logo{
+				width: 40%;
+				position: relative;
+				top:0;
+				margin: auto;
+		}
+		@media(min-width: 600px){
+				.logo{
+					width: 50%;
+				}
+				.left-bar{
+					position: fixed;
+					
+				}
+		
+				.right-bar{
+					position: fixed;
+					
+				}
+			}
+
+
+
+		.left-bar-cols{
+			background: #fff; box-shadow: 0 0 10px 0 #e3e3e2; margin-top: 10px; padding: 5px;
+		}
+
+		.custom-search-icon{
+			color: #cccccc;
+		}
+
+		/* enable absolute positioning */
+		.inner-addon {
+			position: relative;
+		}
+
+		/* style icon */
+		.inner-addon .glyphicon {
+			position: absolute;
+			padding: 10px;
+			pointer-events: none;
+			top: 5px;
+			width: auto;
+		}
+
+		/* align icon */
+		.left-addon .glyphicon  { left:  35px; top: 8px;}
+
+		/* add padding  */
+		.left-addon input  { padding-left:  40px; }
+
+		.custom-navbar-form{
+			width: 40%; position: absolute; top: 10px; left: 100px; 
+		}
+
+		.custom-nav-search{
+			width: 100% !important; background: rgba(1,1,1,0); border: 5px solid #fffff; border-radius: 30px; font-size: 20px; padding: 5px; padding-left:30px; height: 50px; margin-left: 30px; color: #cccccc;
+		}
+
+		.custom-nav-search input{
+			width: 100%;
+		}
+
+		.custom-nav-search:focus{
+			box-shadow:none !important;
+			border:1px solid #ccc !important;
+			outline: none;
+
+		}
+
+		.custom-navbar-links{
+			text-align: center;
+		}
+
+		@media(max-width: 600px){
+			.left-addon .glyphicon  { left:  0; }
+			.left-addon input  { padding-left:  40px; }
+			.custom-navbar-form{
+				width: 60%; left: 90px;
+			}
+			.custom-nav-search{
+				width: 100% !important; margin: 0;
+				margin-left: 0;
+				margin-right: 0 !important;
+				position: relative;
+				left: -10px;
+			}
+
+			.custom-nav-login{
+				margin: 0; width: 70%; padding-right: 0 !important; padding-left: 0 !important;
+			}
+		}
+
+		.custom-nav{
+			background: #3c3c3c; border-radius: 0; font-size: 20px; padding-bottom: 10px;
+		}
+
+		.custom-navbar-toggle{
+			background: none; color: rgba(255,255,255,1); font-size: 24px; margin: 0; margin-right: 10px; margin-top: 10px;
+		}
+
+		.custom-nav a{
+			color: #fefefe; margin-top: 10px; padding-bottom: 5px !important; border-bottom: 10px solid rgba(0,0,0,0); transition: all 0.5s; padding: 0;
+		}
+
+		.custom-nav a:hover{
+			color: #fefefe; background: rgba(1,1,1,0) !important;  border-bottom: 3px solid #fff; transition: all 0.5s;
+		}
+		.custom-nav-login{
+			border: 1px solid !important; border-radius: 50px; margin-left: 50px; padding-left: 50px !important; padding-right: 50px !important; font-family: Lato;text-align: center;
+		}
+
+
+		.location-and-result{
+			padding-top:30px; padding-bottom: 30px; padding-right: 20px; padding-left: 20px; text-align: center;
+		}
+
+		.pink-underline{
+			border-bottom: 2px solid #cf0f50; padding-bottom: 5px;
+		}
+
+		.custom-filters-option{
+			width: 100%; background: rgba(1,1,1,0); border: 0;
+		}
+
+		.custom-filters-checkbox{
+			margin-left: 5px;
+		}
+
+		.left-bar-col-title{
+			width: 100%; padding: 5px; border-bottom: #000 solid 1px; padding-bottom: 1px; color: #cf0f50;
+		}
+
+
+		.gym-listing{
+			background: #fff; box-shadow: 0 0 10px 0 #e3e3e2; margin-top: 10px; padding: 0px;
+		}
+		.gym-details-container{
+			border: 10px; margin-left:20px;
+		}
+
+		.gym-details-col{
+			margin-left: 10px;
+		}
+
+		@media(max-width: 600px){
+			.gym-details-col{
+				margin-right: 20px;
+			}
+		}
+
+		.gym-details{
+			 border-bottom: 1px #000 solid;
+		}
+
+		.gym-image{
+			background: #767776; margin: 0; padding: 0; border: 0;  height: 200px;
+		}
+
+		.custom-map-marker{
+			font-size: 40px !important; margin-top: 5px;
+		}
+		.gym-name{
+			font-family: Lato;
+		}
+
+		.gym-location{
+			margin-left: -10px;
+		}
+
+		.gym-rating-container{
+			padding: 20px; padding-top: 35px; margin-left: 0;
+		}
+
+		.gym-rating{
+			padding: 5px; background: #83c137; border-radius: 20px; font-family: Lato; color: #fff; font-weight: bold; text-align: center;
+		}
+
+
+		.ads{
+			background: #fff; box-shadow: 0 0 10px 0 #e3e3e2; margin-top: 10px; padding: 0px;
+		}
+		.gym-ad-image{
+			background: #767776; margin: 0; padding: 0; border: 0; height:120px;
+		}
+		.gym-tags-container{
+			  padding: 0px; padding-top: 0;  padding-bottom: 10px; margin-top: -10px; border-top: 0px;
+		}
+
+		.gym-tag{
+			color: #5d2688; font-family: Lato; border-right: 0px solid #5d2688; border-bottom: 2px solid #5d2688; border-right: 2px solid #5d2688; border-left: 2px solid #5d2688; border-top: 2px solid #5d2688; border-radius: 20px; padding: 0px; margin-top:5px; font-weight: bold; text-align: center; font-size: 10px;
+		}
+
+
+
+		.gym-ad-title{
+			margin-top: 10px;
+		}
+		.gym-ad-title-rating{
+			 background: #83c137; border-radius: 20px; font-family: Lato; color: #fff; font-weight: bold; text-align: center; padding-left: 0px !important; padding-right: 0px !important; padding: 1px;
+		}
+
+
+
+
+
+		footer{
+			background: #1a1a1a; position: relative; top: 50px; color: #cccccc; padding: 100px; font-size: 24px; padding-left: 10px; padding-top: 20px;
+		}
+
+		footer li{
+			list-style: none;
+		}
+
+		.footer-inner{
+			padding: 100px;
+		}
+
+		@media (max-width:600px ) {
+			.footer-inner{
+				padding: 20px;
+			}
+		}
+
+		.footer-links{
+			border-bottom: 1px solid #ffffff; padding-bottom: 50px;
+		}
+
+		.footer-links li{
+			margin-top: 20px;
+		}
+
+		.footer-links a{
+			color:#cccccc;
+			border-bottom: 0.1px solid rgba(1,1,1,0);
+			transition: all 0.3s;
+		}
+
+		.footer-links a:hover{
+			color: #cccccc;
+			border-bottom: 5px solid #cccccc;
+			transition: all 0.3s;
+			text-decoration: none;
+		}
+
+		.footer-social{
+
+		}
+
+		.footer-social-title{
+			text-align: center; padding-top: 30px;
+		}
+
+		.footer-social-links{
+			padding:100px; padding-top: 30px; padding-bottom: 10px;
+		}
+
+		.footer-social-links a{
+			color: #cccccc;
+			border-bottom: 0.1px solid rgba(1,1,1,0);
+			transition: all 0.3s;
+		}
+
+		.footer-social-links a:hover{
+			color: #cccccc;
+			border-bottom: 5px solid #cccccc;
+			transition: all 0.3s;
+			text-decoration: none;
+		}
+
+		@media (max-width:600px ) {
+			.footer-social-links{
+				text-align: center; padding: 20px;
+			}
+		}
+
+
+
+
+		.fitsquare-logo{
+
+		}

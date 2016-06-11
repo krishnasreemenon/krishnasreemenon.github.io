@@ -1,0 +1,37 @@
+[
+	{
+		"id":"1",
+		"name":"Body Zone Gym",
+		"address":"E-154,Part-2,Greater Kailash,, Delhi - 110001",
+		"city":"New Delhi",
+		"state":"Delhi",
+		"rating":"4.2",
+		"tags":["Swimming Pool","Aerobics","Cardio","Lorem","Ipsum"]
+	},
+	{
+		"id":"2",
+		"name":"Second Gym",
+		"address":"E-154,Part-2,Greater Kailash,New Delhi, Delhi - 110001",
+		"city":"New Delhi",
+		"state":"Delhi",
+		"rating":"3.0",
+		"tags":["Cardio","Treadmill","Hip Hop","Zumba"]
+	},
+	{
+		"id":"3",
+		"name":"Another Gym",
+		"address":"Katpadi Rd. Vellore, Vellore, TN 632014",
+		"city":"Vellore",
+		"rating":"2.9",
+		"tags":["Cardio","Treadmill","Yoga"]
+	},
+	{
+		"id":"4",
+		"name":"The Fitness Edge",
+		"address":"RZ-29, Raghu Nagar-Dabri, Near Janak Cinema, Delhi - 110045 ",
+		"city":"New Delhi",
+		"state":"New Delhi",
+		"rating":"4.5",
+		"tags":["Cardio"]
+	}
+]
