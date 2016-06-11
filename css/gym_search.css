@@ -117,14 +117,14 @@
 		}
 
 		.custom-nav a{
-			color: #fefefe; margin-top: 10px; padding-bottom: 5px !important; border-bottom: 10px solid rgba(0,0,0,0); transition: all 0.5s; padding: 0;
+			color: #fefefe; margin-top: 10px; padding-bottom: 5px; border-bottom: 10px solid rgba(0,0,0,0); transition: all 0.5s; padding: 0;
 		}
 
 		.custom-nav a:hover{
 			color: #fefefe; background: rgba(1,1,1,0) !important;  border-bottom: 3px solid #fff; transition: all 0.5s;
 		}
 		.custom-nav-login{
-			border: 1px solid !important; border-radius: 50px; margin-left: 50px; padding-left: 50px !important; padding-right: 50px !important; font-family: Lato;text-align: center;
+			border: 1px solid !important; border-radius:200px; margin-left: 50px;  margin-right: 20px;padding-left: 50px !important; padding-right: 50px !important; padding-bottom: 15px !important; font-family: Lato;text-align: center;
 		}
 
 
