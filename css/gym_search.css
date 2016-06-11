@@ -21,9 +21,11 @@
 				top:0;
 				margin: auto;
 		}
+
 		@media(min-width: 600px){
 				.logo{
 					width: 50%;
+					top: 10px;
 				}
 				.left-bar{
 					position: fixed;
