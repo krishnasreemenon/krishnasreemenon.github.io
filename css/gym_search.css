@@ -27,12 +27,12 @@
 				}
 				.left-bar{
 					position: fixed;
-					
+
 				}
-		
+
 				.right-bar{
 					position: fixed;
-					
+
 				}
 			}
 
@@ -67,7 +67,7 @@
 		.left-addon input  { padding-left:  40px; }
 
 		.custom-navbar-form{
-			width: 40%; position: absolute; top: 10px; left: 100px; 
+			width: 40%; position:fixed; top: 10px; left: 100px; z-index: 5;
 		}
 
 		.custom-nav-search{
@@ -295,5 +295,10 @@
 
 
 		.fitsquare-logo{
+			margin: auto; text-align: center;
+			margin-top: 30px;
+		}
 
+		.fitsquare-logo img{
+			width: 40%;
 		}
