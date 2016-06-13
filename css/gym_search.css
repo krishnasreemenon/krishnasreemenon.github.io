@@ -20,6 +20,7 @@
 				position: relative;
 				top:10px;
 				margin: auto;
+				left: 0;
 		}
 
 		@media(min-width: 992px){
