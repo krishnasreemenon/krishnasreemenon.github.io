@@ -1,0 +1,26 @@
+[
+	{
+		"id":1,
+		"image":"../static/images/slider_images/manali.jpg",
+		"caption":"Lets go to Manali",
+		"sub":"The Place"
+	},
+	{
+		"id":2,
+		"image":"../static/images/slider_images/siberia.jpg",
+		"caption":"Trans Siberian Railway",
+		"sub":"Russia Privjet"
+	},
+	{
+		"id":3,
+		"image":"../static/images/slider_images/paris.jpg",
+		"caption":"One day to Paris",
+		"sub":"Yes yes one day"
+	},
+	{
+		"id":4,
+		"image":"../static/images/slider_images/chicken.jpg",
+		"caption":"And well eat a lot of chicken",
+		"sub":"This ones for sure"
+	}
+]

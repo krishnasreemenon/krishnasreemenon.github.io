@@ -1,0 +1,20 @@
+[
+	{
+		"id":"card1",
+		"image":"static/images/card_images/card1.jpg",
+		"title":"Lorem Ipsum",
+		"cardcontent":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+	},
+	{
+		"id":"card2",
+		"image":"static/images/card_images/card2.jpg",
+		"title":"Lorem Ipsum",
+		"cardcontent":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+	},
+	{
+		"id":"card3",
+		"image":"static/images/card_images/card3.jpg",
+		"title":"Lorem Ipsum",
+		"cardcontent":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+	}	
+]

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <script src="jquery-1.12.3.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="bxslider/jquery.bxslider.css">
+    <script src="bxslider/jquery.bxslider.min.js"></script>
+    <style>
+        .carousel-container{
+            position: relative;
+            top:100px;
+        }
+
+        .left-indicator{
+            position: absolute; top: 0px; left:0px;width: 100px; height: 91%; background: rgba(0,0,0,0.1); z-index: 2;
+        }
+        .right-indicator{
+            position: absolute; top: 1px; right:0px;width: 100px; height: 91%; background: rgba(0,0,0,0.1); z-index: 2;
+        }
+
+        .left-indicator:hover, .right-indicator:hover{
+            background: rgba(0,0,0,0.5); transition: all 0.5s; cursor: pointer;
+        }
+
+        .left-indicator span, .right-indicator span{
+            position: absolute; left: 50%; top: 50%; font-size: 24px ; color: #FFFFFF;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('.slider').slider({full_width: true});
+            $('.bxslider').bxSlider();
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+<div class="row carousel-container">
+    <div class="col m12">
+        <div class="slider">
+            <ul class="slides">
+
+                <li>
+                    <img src="images/manali.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>This is our big Tagline!</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/siberia.jpg"> <!-- random image -->
+                    <div class="caption left-align">
+                        <h3>Left Aligned Caption</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/paris.jpeg"> <!-- random image -->
+                    <div class="caption right-align">
+                        <h3>Right Aligned Caption</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/chicken.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>This is our big Tagline!</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+            </ul>
+
+            <span class="left-indicator" onclick="$('.slider').slider('prev');"><span class="mdi-navigation-arrow-back"></span> </span>
+            <span class="right-indicator" onclick="$('.slider').slider('next');"><span class="mdi-navigation-arrow-forward"></span> </span>
+
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
