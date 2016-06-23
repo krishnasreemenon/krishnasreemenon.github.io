@@ -1,0 +1,17 @@
+{
+  "name": "prince",
+  "authors": [
+    "Rahul Krishna <rkbalu524@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
