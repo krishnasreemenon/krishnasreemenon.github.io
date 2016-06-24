@@ -16,7 +16,15 @@ html,body{
 
 
 .page-bg{
-    position: fixed; top: 0px; left: 0px;height: 100%; width: 100%; display: none; visibility: visible; background: url("../images/background/bg.jpg") no-repeat 0px; background-size: cover;
+    position: fixed; top: 0px; left: 0px;height: 100%; width: 100%; display: none; visibility: visible; background: url("../images/card_images/card2.jpg") no-repeat 0px; background-size: cover;
+}
+
+.custom-white-text{
+    color:#fff; transition: all 0.5s; 
+}
+
+.page-title-text{
+    transition: all 0.5s; text-shadow: 10px 3px 10px #000;
 }
 
 .page-bg img{

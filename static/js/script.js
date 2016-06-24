@@ -10,11 +10,13 @@ $(document).ready(function () {
     $(window).bind("scroll",function () {
         if ($(window).scrollTop()>100) {
             $('.page-bg').fadeIn(800,function () {
-
+            $('.page-title-text').addClass('custom-white-text');
             });
         }
         else if($(window).scrollTop()<100) {
-            $('.page-bg').fadeOut(500);
+            $('.page-bg').fadeOut(500,function(){
+            $('.page-title-text').removeClass('custom-white-text');
+        });
         }
 
 
