@@ -19,6 +19,8 @@
 </head>
 
 <body>
+<div id="load"></div>
+<div id="contents">
 <div class="page-bg"></div>
 <div class="center page-title"><div class="page-title-text">
 	Happy Birthday,<ul id="cyclelist"><li id="cyclelist1">Pothe.</li><li id="cyclelist2">Kaithe.</li><li id="cyclelist3">Chakkakkuroo.</li> <li class="cyclelist4">Pinnacke.</li><li class="cyclelist5">Precious.</li>
@@ -154,7 +156,20 @@
 
 </div>
 
-
-
+</div>
+<script type="text/javascript">
+	document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}
+</script>
 </body>
 </html>

@@ -105,3 +105,11 @@ if it's not present, don't show loader */
 	z-index: 9999;
 	background: url('static/images/preloader.gif') center no-repeat #fff;
 }
+
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(255,255,255,0.25)
+}
