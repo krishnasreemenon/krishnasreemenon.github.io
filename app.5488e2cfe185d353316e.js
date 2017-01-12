@@ -170,7 +170,6 @@ webpackJsonp([0],[
 	      _react2.default.createElement(
 	        _reactRouter.Route,
 	        { path: '/lender', component: _index2.default },
-	        _react2.default.createElement(_reactRouter.Route, { path: '/lender/offer_loans', component: _Loans_Offered2.default }),
 	        ' ',
 	        _react2.default.createElement(_reactRouter.Route, { path: '/lender/applicants', component: _Applicants2.default })
 	      ),
@@ -20700,7 +20699,9 @@ webpackJsonp([0],[
 	/**
 	 * Created by rahul on 1/12/17.
 	 */
-	var initialState = exports.initialState = {};
+	var initialState = exports.initialState = {
+	  status: 'wait'
+	};
 	
 	function reducer() {
 	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -20709,7 +20710,7 @@ webpackJsonp([0],[
 	  switch (action.type) {
 	    case 'SIGNUP_FULFILLED':
 	      {
-	        return (0, _extends3.default)({}, state, { body: action.payload, status: 'done' });
+	        return (0, _extends3.default)({}, state, { body: action.payload, status: action.payload.data.status });
 	      }
 	    case 'SIGNUP_PENDING':
 	      {
@@ -21228,65 +21229,7 @@ webpackJsonp([0],[
 	                                )
 	                            )
 	                        ),
-	                        _react2.default.createElement(
-	                            _reactBootstrap.Nav,
-	                            { pullRight: true },
-	                            _react2.default.createElement(
-	                                _reactBootstrap.NavDropdown,
-	                                { eventKey: 2, title: '', id: 'basic-nav-dropdown', className: 'custom-icon center-align' },
-	                                _react2.default.createElement(
-	                                    _reactBootstrap.MenuItem,
-	                                    { className: 'center' },
-	                                    _react2.default.createElement(
-	                                        'h7',
-	                                        { className: 'blue-text center' },
-	                                        'Bank in the North'
-	                                    ),
-	                                    _react2.default.createElement('br', null),
-	                                    'Credits : 350 '
-	                                ),
-	                                _react2.default.createElement(
-	                                    _reactBootstrap.MenuItem,
-	                                    null,
-	                                    _react2.default.createElement(
-	                                        'button',
-	                                        { className: 'btn blue' },
-	                                        'Buy Credits'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-	                                _react2.default.createElement(
-	                                    _reactBootstrap.MenuItem,
-	                                    { className: 'edit-profile' },
-	                                    _react2.default.createElement(
-	                                        'i',
-	                                        { className: 'mi mi-settings' },
-	                                        'a'
-	                                    ),
-	                                    'Edit Profile'
-	                                ),
-	                                _react2.default.createElement(
-	                                    _reactBootstrap.MenuItem,
-	                                    { className: 'help-and-support' },
-	                                    _react2.default.createElement(
-	                                        'i',
-	                                        { className: 'mi mi-help' },
-	                                        'a'
-	                                    ),
-	                                    'Help and Support'
-	                                ),
-	                                _react2.default.createElement(
-	                                    _reactBootstrap.MenuItem,
-	                                    { className: 'logout' },
-	                                    _react2.default.createElement(
-	                                        'i',
-	                                        { className: 'mi mi-exit-to-app' },
-	                                        'a'
-	                                    ),
-	                                    'Logout'
-	                                )
-	                            )
-	                        )
+	                        _react2.default.createElement(_reactBootstrap.Nav, { pullRight: true })
 	                    )
 	                ),
 	                _react2.default.createElement('br', null),
@@ -38732,7 +38675,7 @@ webpackJsonp([0],[
 	    var _this = (0, _possibleConstructorReturn3.default)(this, (Applicants.__proto__ || (0, _getPrototypeOf2.default)(Applicants)).call(this, props));
 	
 	    _this.state = {
-	      amount: 0,
+	      amount: '',
 	      city: ''
 	    };
 	    return _this;
@@ -38796,14 +38739,37 @@ webpackJsonp([0],[
 	                null,
 	                _react2.default.createElement(
 	                  'h5',
-	                  null,
+	                  { className: 'col s12 center' },
 	                  'Search for Loans'
 	                ),
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Amount', className: 'col s6', value: this.state.amount, onChange: this.handleChange('amount').bind(this) }),
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'City', className: 'col s6', value: this.state.city, onChange: this.handleChange('city').bind(this) }),
-	                _react2.default.createElement('input', { type: 'submit', onClick: this.processForm.bind(this) })
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'row' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'input-field col s6' },
+	                    _react2.default.createElement('input', { type: 'text', id: 'amount', value: this.state.amount, onChange: this.handleChange('amount').bind(this) }),
+	                    _react2.default.createElement(
+	                      'label',
+	                      { htmlFor: 'amount' },
+	                      'Amount'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'input-field col s6' },
+	                    _react2.default.createElement('input', { type: 'text', id: 'city', value: this.state.city, onChange: this.handleChange('city').bind(this) }),
+	                    _react2.default.createElement(
+	                      'label',
+	                      { htmlFor: 'city' },
+	                      'City'
+	                    )
+	                  ),
+	                  _react2.default.createElement('input', { type: 'submit', onClick: this.processForm.bind(this), className: 'btn green col s2 push-s5' })
+	                )
 	              )
 	            ),
+	            _react2.default.createElement('hr', null),
 	            _react2.default.createElement(
 	              'table',
 	              null,
@@ -40438,11 +40404,11 @@ webpackJsonp([0],[
 	    key: 'displayError',
 	    value: function displayError() {
 	      if (this.props.requested.status == 'wait') {
-	        return 'Enter your details';
+	        return 'Enter the details';
 	      } else if (this.props.requested.status == '') {
 	        return '<div>Some error occured. You might have to log in again<br/><a href="/login">Log In</div></div>';
-	      } else if (this.props.requested.status == 'done') {
-	        return 'Success!';
+	      } else if (this.props.requested.status) {
+	        return 'Success! You should get a call from the Lender shortly!';
 	      } else if (this.props.requested.status == 'loading') {
 	        return '<div class="progress"><div class="indeterminate"></div></div>';
 	      }
@@ -40563,7 +40529,15 @@ webpackJsonp([0],[
 	              _react2.default.createElement('input', { className: 'col s12', placeholder: 'Amount', onChange: this.handleChange('amount') }),
 	              _react2.default.createElement('input', { className: 'col s12', placeholder: 'Expected Interest', onChange: this.handleChange('interest') }),
 	              _react2.default.createElement('input', { type: 'submit', className: 'col s4 push-s4 btn blue', onClick: this.processForm.bind(this) }),
-	              _react2.default.createElement('span', { className: 'col s10 push-s1 center', dangerouslySetInnerHTML: { __html: this.displayError() } })
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'col s12 center card-footer' },
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('span', { dangerouslySetInnerHTML: { __html: this.displayError() } }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null)
+	              )
 	            )
 	          )
 	        );
@@ -59091,7 +59065,7 @@ webpackJsonp([0],[
 	
 	    _this.state = {
 	      city: '',
-	      amount: 0
+	      amount: ''
 	    };
 	    return _this;
 	  }
@@ -59183,10 +59157,44 @@ webpackJsonp([0],[
 	        { className: 'row' },
 	        _react2.default.createElement(
 	          'form',
-	          null,
-	          _react2.default.createElement('input', { type: 'text', className: 'col s6', placeholder: 'City', value: this.state.city, onChange: this.handleCityChange.bind(this) }),
-	          _react2.default.createElement('input', { type: 'text', className: 'col s6', placeholder: 'Amount', value: this.state.amount, onChange: this.handleAmountChange.bind(this) }),
-	          _react2.default.createElement('input', { type: 'submit', className: 'btn green', onClick: this.processForm.bind(this) })
+	          { className: 'card col s10 push-s1' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'card-content' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'row col s12 m6' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s12 m12 l12' },
+	                _react2.default.createElement('input', { type: 'text', id: 'city', value: this.state.city, onChange: this.handleCityChange.bind(this) }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { htmlFor: 'city' },
+	                  'City'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'row col s12 m6' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s12 m12 l12' },
+	                _react2.default.createElement('input', { type: 'text', id: 'amount', value: this.state.amount, onChange: this.handleAmountChange.bind(this) }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { htmlFor: 'amount' },
+	                  'Amount'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'row' },
+	              _react2.default.createElement('input', { type: 'submit', className: 'btn green col s4 push-s4', onClick: this.processForm.bind(this) })
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -63345,6 +63353,10 @@ webpackJsonp([0],[
 	
 	var _reactRouterBootstrap = __webpack_require__(552);
 	
+	var _reactRouter = __webpack_require__(303);
+	
+	var _reactBootstrap = __webpack_require__(385);
+	
 	var _LenderLogin = __webpack_require__(769);
 	
 	var _LenderLogin2 = _interopRequireDefault(_LenderLogin);
@@ -63376,32 +63388,43 @@ webpackJsonp([0],[
 	          { className: 'col s12' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col s6 blue center custom-login-routes' },
+	            { className: 'col s12 l6 m6 blue center custom-login-routes' },
 	            _react2.default.createElement(
 	              _reactRouterBootstrap.LinkContainer,
 	              { to: '/login/lender' },
 	              _react2.default.createElement(
-	                'span',
-	                null,
+	                _reactBootstrap.Button,
+	                { className: 'blue' },
 	                'Lender'
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col s6 blue center custom-login-routes' },
+	            { className: 'col s12 l6 m6 blue center custom-login-routes' },
 	            _react2.default.createElement(
 	              _reactRouterBootstrap.LinkContainer,
 	              { to: '/login/borrower' },
 	              _react2.default.createElement(
-	                'span',
-	                null,
+	                _reactBootstrap.Button,
+	                { className: 'blue' },
 	                'Borrower'
 	              )
 	            )
 	          )
 	        ),
-	        this.props.children
+	        this.props.children,
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col s6 push-s3' },
+	          'Don\'t have an account? ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/signup' },
+	            'Sign up here.'
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -63566,7 +63589,7 @@ webpackJsonp([0],[
 	
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'row' },
 	        _react2.default.createElement(
 	          'form',
 	          { className: 'col s6 push-s3 card white' },
@@ -63728,7 +63751,7 @@ webpackJsonp([0],[
 	      switch (error) {
 	        case 'Enter Password to Continue':
 	          {
-	            return '';
+	            return 'Enter Password';
 	          }
 	        case 'Loading!':
 	          {
@@ -63781,14 +63804,14 @@ webpackJsonp([0],[
 	            _react2.default.createElement('input', { type: 'password', value: this.state.password, onChange: this.handlePasswordChange.bind(this), className: 'col s12', placeholder: 'Password' }),
 	            _react2.default.createElement('input', { type: 'submit', onClick: this.processForm.bind(this), className: 'btn blue col s4 push-s4' }),
 	            _react2.default.createElement(
-	              'div',
-	              { className: 'col s12 center' },
-	              ' ',
-	              _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: this.showError(login.error) }, className: 'col s12' })
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null)
+	              'span',
+	              { className: 'col s12 center card-footer red-text' },
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('span', { dangerouslySetInnerHTML: { __html: this.showError(login.error) } }),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null)
+	            )
 	          )
 	        )
 	      );
@@ -63834,6 +63857,10 @@ webpackJsonp([0],[
 	
 	var _reactRouter = __webpack_require__(303);
 	
+	var _reactRouterBootstrap = __webpack_require__(552);
+	
+	var _reactBootstrap = __webpack_require__(385);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Signup = function (_React$Component) {
@@ -63849,20 +63876,35 @@ webpackJsonp([0],[
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'row' },
 	        _react2.default.createElement(
-	          'h1',
-	          { className: 'custom-link' },
+	          'div',
+	          { className: 'col s12' },
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/signup/lender' },
-	            'Lender'
+	            'div',
+	            { className: 'col s12 l6 m6 blue center custom-login-routes' },
+	            _react2.default.createElement(
+	              _reactRouterBootstrap.LinkContainer,
+	              { to: '/signup/lender/financial_institution' },
+	              _react2.default.createElement(
+	                _reactBootstrap.Button,
+	                { className: 'blue' },
+	                'Lender'
+	              )
+	            )
 	          ),
-	          ' |',
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/signup/borrower' },
-	            'Borrower'
+	            'div',
+	            { className: 'col s12 l6 m6 blue center custom-login-routes' },
+	            _react2.default.createElement(
+	              _reactRouterBootstrap.LinkContainer,
+	              { to: '/signup/borrower' },
+	              _react2.default.createElement(
+	                _reactBootstrap.Button,
+	                { className: 'blue' },
+	                'Borrower'
+	              )
+	            )
 	          )
 	        ),
 	        this.props.children
@@ -65592,6 +65634,8 @@ webpackJsonp([0],[
 	
 	var _MenuItem2 = _interopRequireDefault(_MenuItem);
 	
+	var _reactRouter = __webpack_require__(303);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var FinancialInstitutionSignup = (_dec = (0, _reactRedux.connect)(function (store) {
@@ -65607,21 +65651,21 @@ webpackJsonp([0],[
 	    var _this = (0, _possibleConstructorReturn3.default)(this, (FinancialInstitutionSignup.__proto__ || (0, _getPrototypeOf2.default)(FinancialInstitutionSignup)).call(this, props));
 	
 	    _this.state = {
-	      "phone": '',
+	      /*"phone":'',*/
 	      "name": '',
 	      "address": '',
 	      "city": '',
 	      "state": "",
-	      "min": '',
-	      "max": '',
-	      "sex": '',
+	      /*"min":0,
+	      "max":0,*/
+	      "sex": 1,
 	      "email": '',
-	      "type": '',
+	      "type": 'Financial Institution',
 	      "password": '',
 	      "organization": 1,
 	      "recognition": 1,
-	      "organization_value": '',
-	      "recognition_value": '',
+	      "organization_value": 'Bank',
+	      "recognition_value": 'Pan India',
 	      "accHolderName": '',
 	      "designation": '',
 	      "website": ''
@@ -65660,14 +65704,19 @@ webpackJsonp([0],[
 	      switch (value) {
 	        case 1:
 	          real_value = "Bank";
+	          break;
 	        case 2:
 	          real_value = "NBFC";
+	          break;
 	        case 3:
 	          real_value = "NGO";
+	          break;
 	        case 4:
 	          real_value = "Private";
+	          break;
 	        case 5:
 	          real_value = "Others";
+	          break;
 	        default:
 	          real_value = "Others";
 	      }
@@ -65683,10 +65732,13 @@ webpackJsonp([0],[
 	      switch (value) {
 	        case 1:
 	          real_value = "Pan India";
+	          break;
 	        case 2:
-	          real_value = "Recognization";
+	          real_value = "recognization";
+	          break;
 	        case 3:
-	          real_value = "Local";
+	          real_value = "locals";
+	          break;
 	        default:
 	          real_value = "Local";
 	      }
@@ -65694,6 +65746,26 @@ webpackJsonp([0],[
 	        recognition: value,
 	        recognition_value: real_value
 	      });
+	    }
+	  }, {
+	    key: 'showStatus',
+	    value: function showStatus() {
+	      switch (this.props.finSignup.status) {
+	        case 'wait':
+	          {
+	            return 'Enter the details!';
+	          }
+	          break;
+	        case 'true':
+	          {
+	            return 'Success!';
+	          }
+	          break;
+	        case 'pending':
+	          {
+	            return '<div class="progress"><div class="indeterminate"></div></div>';
+	          }
+	      }
 	    }
 	  }, {
 	    key: 'render',
@@ -65766,11 +65838,58 @@ webpackJsonp([0],[
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'input-field col s12' },
-	              _react2.default.createElement('input', { type: 'text', placeholder: 'State', className: 'col s12', onChange: this.handleChange('state'), value: this.state.state })
+	              _react2.default.createElement('input', { type: 'text', onChange: this.handleChange('state'), value: this.state.state }),
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'state' },
+	                'State'
+	              )
 	            )
 	          ),
-	          _react2.default.createElement('input', { type: 'text', placeholder: 'Minimum Quote', className: 'col s6', onChange: this.handleChange('min'), value: this.state.min }),
-	          _react2.default.createElement('input', { type: 'text', placeholder: 'Maximum Quote', className: 'col s6', onChange: this.handleChange('max'), value: this.state.max }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row col m6 s12' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-field col s12 m12' },
+	              _react2.default.createElement('input', { type: 'text', className: 'col s6', onChange: this.handleChange('min'), value: this.state.min }),
+	              _react2.default.createElement(
+	                'label',
+	                null,
+	                'Minimum Quote'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row col m6 s12' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-field col s12 m12' },
+	              _react2.default.createElement('input', { type: 'text', className: 'col s6', onChange: this.handleChange('max'), value: this.state.max }),
+	              _react2.default.createElement(
+	                'label',
+	                null,
+	                'Maximum Quote'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _MuiThemeProvider2.default,
+	            null,
+	            _react2.default.createElement(
+	              _RadioButton.RadioButtonGroup,
+	              { name: 'sex', defaultSelected: 'female', value: this.state.sex, onChange: this.sexChange.bind(this) },
+	              _react2.default.createElement(_RadioButton.RadioButton, {
+	                value: 'Male',
+	                label: 'Male'
+	              }),
+	              _react2.default.createElement(_RadioButton.RadioButton, {
+	                value: 'Female',
+	                label: 'Female'
+	              })
+	            )
+	          ),
 	          _react2.default.createElement('input', { type: 'email', className: 'col s12', placeholder: 'Email', onChange: this.handleChange('email'), value: this.state.email }),
 	          _react2.default.createElement('input', { type: 'password', className: 'col s12', placeholder: 'Password', onChange: this.handleChange('password'), value: this.state.password }),
 	          _react2.default.createElement(
@@ -65849,7 +65968,24 @@ webpackJsonp([0],[
 	              )
 	            )
 	          ),
-	          _react2.default.createElement('input', { type: 'submit', onClick: this.processForm.bind(this), className: 'btn blue' })
+	          _react2.default.createElement('input', { type: 'submit', onClick: this.processForm.bind(this), className: 'btn blue col s4 push-s4' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col s12 center' },
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('span', { dangerouslySetInnerHTML: { __html: this.showStatus() }, className: 'col s4 push-s4' })
+	            )
+	          )
+	        ),
+	        'Account created? Or already have an account? ',
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/login' },
+	          'Log in here.'
 	        )
 	      );
 	    }
@@ -67397,4 +67533,4 @@ webpackJsonp([0],[
 
 /***/ }
 ]);
-//# sourceMappingURL=app.f2127ead863fec66b8c9.js.map
+//# sourceMappingURL=app.5488e2cfe185d353316e.js.map
