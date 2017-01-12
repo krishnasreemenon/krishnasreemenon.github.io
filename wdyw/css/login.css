@@ -1,0 +1,27 @@
+
+
+.tabs .tab a:hover, .tabs .tab a.active{
+    color: #0b97c4 !important;
+    border-bottom: 1px solid #0b97c4 !important;
+    text-decoration: none;
+}
+
+.tabs .tab a{
+    color: #00b3ee;
+}
+
+.tabs .indicator{
+    opacity: 0;
+}
+
+.custom-login-routes{
+  padding: 100px !important;
+}
+
+.custom-link{
+  font-size:72px;
+}
+
+.lender-signup{
+  background: #ffffff;
+}
