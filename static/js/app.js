@@ -1,1 +1,0 @@
-var krisApp=angular.module('krisApp', ['krisAppControllers']);
