@@ -15,11 +15,13 @@
 }
 
 .custom-login-routes{
-  padding-bottom: 100px !important;
+  padding-bottom: 30px !important;
   padding-top: 100px !important;
   padding-left: 0px !important;
   padding-right: 0px !important;
   font-size: 24px;
+  height: 350px;
+  overflow: hidden;
 }
 
 .custom-link{
@@ -37,4 +39,26 @@
 .custom-login-routes .active{
   background: #FFFFFF !important;
   color: #000;
+}
+
+.login-colored-image{
+  width:60px;
+}
+.login-image-container{
+  position: relative;
+  bottom: -50px;
+  border-right: 0.5px solid rgba(255,255,255,0.5);
+}
+
+.custom-button{
+  background: '#ffffff'
+}
+
+.custom-submit-button{
+  background: #ffffff;
+  padding: 10px !important;
+  border: 2px solid #018cee;
+  color:#018cee;
+  font-weight: bold;
+  border-radius: 5px;
 }
