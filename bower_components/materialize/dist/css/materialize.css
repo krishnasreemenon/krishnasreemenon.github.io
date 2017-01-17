@@ -4032,8 +4032,8 @@ nav [class^="mdi-"], nav [class*="mdi-"],
 nav i.material-icons {
   display: block;
   font-size: 24px;
-  height: 56px;
-  line-height: 56px;
+  height: 19px;
+  line-height:19px;
 }
 
 nav .nav-wrapper {

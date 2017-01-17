@@ -46,7 +46,7 @@
 }
 
 .nav a{
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 .navbar-brand{
@@ -167,4 +167,8 @@ ul .open{
 .nav i{
     height: auto !important;
     color: grey;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: #ffffff ;
 }
