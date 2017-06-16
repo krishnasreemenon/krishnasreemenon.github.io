@@ -6,6 +6,10 @@ body{
   margin: 0px;
   // This should probably contain a background
   font-family: 'Barrio', cursive;
+  .helper-text{
+    text-align: center;
+    padding-bottom: 50px;
+  }
   .single-page-body-container{
     width: 100%;
     .main-text-happy-birthday{
@@ -51,10 +55,17 @@ body{
     .modal-content{
       background:rgba(0,0,0,0.5);
       color:#fff;
+      background-size: cover;
     }
   }
   .girl-modal{
-    background:url('../images/tesla.jpg');
+    background:url('../images/girl.jpg');
+    @media(max-width: 600px){
+      background-size: 100%;
+    }
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
     .close-girlModal{
       position: absolute;
       bottom: 0px;
@@ -72,9 +83,40 @@ body{
     }
   }
 
-  .legend-modal{
-    background:url('../images/tesla.jpg');
-    .close-legendModal{
+  .woman-modal{
+    background:url('../images/woman.jpg');
+    @media(max-width: 600px){
+      background-size: 100%;
+    }
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    .close-womanModal{
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+      padding: 100px;
+      color: #fff;
+      font-size: 36px;
+      cursor: pointer;
+    }
+    .modal-content{
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+
+  .lover-modal{
+    background:url('../images/kiss.jpg');
+    @media(max-width: 600px){
+      background-size: 100%;
+    }
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    .close-loverModal{
       position: absolute;
       bottom: 0px;
       width: 100%;
@@ -92,7 +134,13 @@ body{
   }
 
   .professional-modal{
-    background:url('../images/tesla.jpg');
+    background:url('../images/professional.jpg');
+    @media(max-width: 600px){
+      background-size: 100%;
+    }
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
     .close-professionalModal{
       position: absolute;
       bottom: 0px;

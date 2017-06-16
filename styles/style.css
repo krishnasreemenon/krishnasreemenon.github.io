@@ -5,6 +5,9 @@ body {
   height: 100%;
   margin: 0px;
   font-family: 'Barrio', cursive; }
+  body .helper-text {
+    text-align: center;
+    padding-bottom: 50px; }
   body .single-page-body-container {
     width: 100%; }
     body .single-page-body-container .main-text-happy-birthday {
@@ -39,9 +42,16 @@ body {
   @media (max-width: 600px) {
     .modals .modal-content {
       background: rgba(0, 0, 0, 0.5);
-      color: #fff; } }
+      color: #fff;
+      background-size: cover; } }
   .modals .girl-modal {
-    background: url("../images/tesla.jpg"); }
+    background: url("../images/girl.jpg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media (max-width: 600px) {
+      .modals .girl-modal {
+        background-size: 100%; } }
     .modals .girl-modal .close-girlModal {
       position: absolute;
       bottom: 0px;
@@ -55,9 +65,15 @@ body {
     .modals .girl-modal .modal-content {
       text-align: center;
       font-size: 24px; }
-  .modals .legend-modal {
-    background: url("../images/tesla.jpg"); }
-    .modals .legend-modal .close-legendModal {
+  .modals .woman-modal {
+    background: url("../images/woman.jpg");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media (max-width: 600px) {
+      .modals .woman-modal {
+        background-size: 100%; } }
+    .modals .woman-modal .close-womanModal {
       position: absolute;
       bottom: 0px;
       width: 100%;
@@ -67,11 +83,38 @@ body {
       color: #fff;
       font-size: 36px;
       cursor: pointer; }
-    .modals .legend-modal .modal-content {
+    .modals .woman-modal .modal-content {
+      text-align: center;
+      font-size: 24px; }
+  .modals .lover-modal {
+    background: url("../images/kiss.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media (max-width: 600px) {
+      .modals .lover-modal {
+        background-size: 100%; } }
+    .modals .lover-modal .close-loverModal {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 100px;
+      color: #fff;
+      font-size: 36px;
+      cursor: pointer; }
+    .modals .lover-modal .modal-content {
       text-align: center;
       font-size: 24px; }
   .modals .professional-modal {
-    background: url("../images/tesla.jpg"); }
+    background: url("../images/professional.jpg");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media (max-width: 600px) {
+      .modals .professional-modal {
+        background-size: 100%; } }
     .modals .professional-modal .close-professionalModal {
       position: absolute;
       bottom: 0px;
