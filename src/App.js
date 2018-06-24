@@ -32,7 +32,7 @@ class App extends Component {
           <PromiseText>
             This montha is a jinn! It will sing you songs and grant you wishes. Click the below button to ask for a wish!
             <br />
-            <WishButton href="http://telegram.me/@RahulAKrishna">
+            <WishButton href="https://telegram.me/RahulAKrishna">
               Wish!
             </WishButton>
           </PromiseText>
