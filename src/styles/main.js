@@ -84,9 +84,13 @@ export const Promise = styled.div`
 export const PromiseText = styled.div`
   font-family: 'IM Fell English SC', serif;
   text-align: center;
-  font-size: 64px;
+  font-size: 32px;
   position: absolute;
   bottom: 10px;
   background: rgba(255,255,255,0.5);
   width: 100vw;
+`;
+
+export const WishButton = styled.a`
+  
 `;

@@ -8,6 +8,7 @@ import {
   KallyanamText,
   Promise,
   PromiseText,
+  WishButton,
 } from './styles/main';
 
 class App extends Component {
@@ -29,7 +30,11 @@ class App extends Component {
         </Kallyanam>
         <Promise>
           <PromiseText>
-            Oru 100 divasam 100 pattu paadi tharatte?!
+            This montha is a jinn! It will sing you songs and grant you wishes. Click the below button to ask for a wish!
+            <br />
+            <WishButton href="http://telegram.me/@RahulAKrishna">
+              Wish!
+            </WishButton>
           </PromiseText>
         </Promise>
       </Wrapper>
