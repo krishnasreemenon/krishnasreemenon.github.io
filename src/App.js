@@ -1,7 +1,12 @@
 import React from 'react';
+import Home from './components/Home';
+import Candle from './components/Candle';
 
-const App = () => {
-  return <div className="App">Happy Birthday Krishna!</div>;
-};
+const App = () => (
+  <div>
+    <Home />
+    <Candle />
+  </div>
+);
 
 export default App;
