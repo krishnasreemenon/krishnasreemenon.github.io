@@ -1,6 +1,7 @@
 .home {
   font-family: 'Cinzel Decorative', cursive;
   background: #ffc6bf;
+  color: #46413b;
   margin-left: 5%;
   padding: 10px;
   margin-right: 5%;
@@ -28,9 +29,16 @@
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    box-shadow: 0px 0px 0.5px 0px;
+    box-shadow: 0px 0px 0.5px 0px #46413b;
+    transition: all 0.5s;
     .age {
       font-weight: 700;
+      font-size: 34px;
+      cursor: pointer;
     }
+  }
+  .circle:hover {
+    box-shadow: 0px 0px 2px 0px #46413b;
+    transition: all 0.5s;
   }
 }
