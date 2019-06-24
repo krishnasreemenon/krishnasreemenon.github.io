@@ -60,6 +60,8 @@ const Home = () => {
         onClose={closeTaylor}
         aria-labelledby="alert-dialog-slide-title"
         aria-describedby="alert-dialog-slide-description"
+        fullScreen
+        style={{ maxWidth: '100vw', maxHeight: '100vh' }}
       >
         <DialogTitle id="alert-dialog-slide-title">
           {'Listen to 22 maybe!'}
@@ -79,6 +81,7 @@ const Home = () => {
         keepMounted
         onClose={closePictures}
         fullScreen
+        style={{ maxWidth: '100vw', maxHeight: '100vh' }}
       >
         <DialogTitle>We'll make it together!</DialogTitle>
         <DialogContent>
