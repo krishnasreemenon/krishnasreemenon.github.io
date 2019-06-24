@@ -16,7 +16,7 @@ const style = {
 
 const Images = () => (
   <div>
-    <Carousel slidesPerPage={2} infinite keepDirectionWhenDragging>
+    <Carousel slidesPerPage={2} infinite keepDirectionWhenDragging arrows>
       <img src={imageOne} alt="Stay hot!" style={style} />
       Stay hot!
       <img src={imageTwo} alt="And cute!" style={style} />
