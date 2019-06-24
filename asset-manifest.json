@@ -1,10 +1,25 @@
 {
-  "main.css": "static/css/main.65027555.css",
-  "main.css.map": "static/css/main.65027555.css.map",
-  "main.js": "static/js/main.c9ba9e87.js",
-  "main.js.map": "static/js/main.c9ba9e87.js.map",
-  "static/media/background.jpeg": "static/media/background.64d62e13.jpeg",
-  "static/media/kallyanam.jpg": "static/media/kallyanam.584f307d.jpg",
-  "static/media/kannum_kannum.jpg": "static/media/kannum_kannum.ba35ee1f.jpg",
-  "static/media/sundaramukham.jpg": "static/media/sundaramukham.015c8cd6.jpg"
+  "files": {
+    "main.css": "/static/css/main.7eade0e2.chunk.css",
+    "main.js": "/static/js/main.bfcc0b81.chunk.js",
+    "main.js.map": "/static/js/main.bfcc0b81.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.38695677.chunk.css": "/static/css/2.38695677.chunk.css",
+    "static/js/2.2503653b.chunk.js": "/static/js/2.2503653b.chunk.js",
+    "static/js/2.2503653b.chunk.js.map": "/static/js/2.2503653b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.72ad82127adb1d364209e04da4f27eb8.js": "/precache-manifest.72ad82127adb1d364209e04da4f27eb8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.38695677.chunk.css.map": "/static/css/2.38695677.chunk.css.map",
+    "static/css/main.7eade0e2.chunk.css.map": "/static/css/main.7eade0e2.chunk.css.map",
+    "static/media/1.jpg": "/static/media/1.03be35ef.jpg",
+    "static/media/2.jpg": "/static/media/2.a6326113.jpg",
+    "static/media/3.jpg": "/static/media/3.28b3de98.jpg",
+    "static/media/4.jpg": "/static/media/4.1eb78068.jpg",
+    "static/media/5.jpg": "/static/media/5.3fce12d0.jpg",
+    "static/media/6.jpg": "/static/media/6.8e0637b5.jpg",
+    "static/media/7.jpg": "/static/media/7.d514360b.jpg",
+    "static/media/8.jpg": "/static/media/8.9a6c8fa4.jpg"
+  }
 }
