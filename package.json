@@ -1,9 +1,10 @@
 {
   "name": "krishnasreemenon.github.io",
-  "version": "0.1.0",
+  "version": "5.0.0",
   "private": true,
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.10.17",
+    "@fullpage/react-fullpage": "^0.1.17",
     "@material-ui/core": "^4.1.1",
     "@material-ui/icons": "^4.2.0",
     "material-ui": "^0.20.2",
@@ -11,7 +12,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-joyride": "^2.0.5",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
